@@ -5,14 +5,17 @@ AllCops:
     - 'spec/fixtures/**/*'
   TargetRubyVersion: 2.6
 Metrics/LineLength:
+  Enabled: true
   Max: 100
 
 Metrics/BlockLength:
+  Enabled: true
   Exclude:
     - config/**/*
     - spec/**/*
 
 Lint/AmbiguousBlockAssociation:
+  Enabled: true
   Exclude:
     - spec/**/*
 
