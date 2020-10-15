@@ -16,6 +16,9 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# Igoner rbenv version setting
+.ruby-version
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history

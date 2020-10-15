@@ -1,0 +1,11 @@
+ruby '2.6.5'
+
+source 'https://rubygems.org'
+
+group :development, :testt do
+  gem 'rubocop', require: false
+end
+
+group :test do
+  gem 'rspec'
+end
