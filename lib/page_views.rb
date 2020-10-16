@@ -2,19 +2,16 @@
 
 require_relative 'counters/most_view'
 require_relative 'counters/unique_view'
+require_relative 'log_parser.rb'
 
 class PageViews
-  def initialize(page_views)
-    @page_views = page_views
+  def initialize(log_file_path, parser = LogParser, counters = [Counters::MostView, Counters::UniqueView] )
+    parsed_log = parser.new(log_file_path).parse
+    @counters = counters.map { |counter| counter.new(parsed_log) }
   end
 
-  def most_views
-    Counters::MostView.new(@page_views).count
+  def counts
+    @counters.map(&:count).flatten
   end
-
-  def unique_views
-    Counters::UniqueView.new(@page_views).count
-  end
-
 
 end

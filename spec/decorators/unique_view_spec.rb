@@ -23,7 +23,7 @@ describe Counters::UniqueView do
       ]
     end
 
-    it 'should return sorted most views with count' do
+    it 'should return sorted unique views with count' do
       expect(subject).to eq(expected_sorted_count)
     end
   end
