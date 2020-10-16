@@ -32,7 +32,7 @@ describe PageViews do
     end
   end
 
-  describe '#most_views' do
+  describe '#unique_views' do
     subject { described_class.new(page_views).unique_views }
     context 'when page views given' do
       let(:page_views) do
