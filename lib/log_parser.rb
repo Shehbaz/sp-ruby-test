@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require 'byebug'
 require_relative 'errors_exceptions/errors.rb'
 
 class LogParser
@@ -8,9 +8,22 @@ class LogParser
   def initialize(log_path)
     @log_path = log_path
     validate
+    @parsed_lines = Hash.new { |h, k| h[k] = [] }
+  end
+
+  def parse
+    parse_log
+    @parsed_lines
   end
 
   private
+
+  def parse_log
+    File.open(log_path).each_line do |line|
+      page, ip = line.split
+      @parsed_lines[page] << ip
+    end
+  end
 
   def validate
     raise LogPathRequired if log_path.nil? || log_path.empty?
