@@ -2,7 +2,6 @@
 
 require_relative 'decorators/most_view'
 require_relative 'decorators/unique_view'
-require 'byebug'
 
 class PageViews
   def initialize(page_views)
@@ -16,5 +15,4 @@ class PageViews
   def unique_views
     Decorators::UniqueView.new(@page_views).count
   end
-
 end

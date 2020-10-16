@@ -15,6 +15,5 @@ module Decorators
     def formatted_count
       views_sorted.map { |page, views| "#{page} #{views_count(views)} #{view_detail}" }
     end
-
   end
 end
