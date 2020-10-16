@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/decorators/most_view'
+require_relative '../../lib/counters/most_view'
 
-describe Decorators::MostView do
+describe Counters::MostView do
   subject { described_class.new(page_views).count }
   context 'when page views given' do
     let(:page_views) do

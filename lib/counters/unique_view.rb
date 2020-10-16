@@ -3,7 +3,7 @@
 
 require_relative 'base'
 
-module Decorators
+module Counters
   class UniqueView < Base
     private
 

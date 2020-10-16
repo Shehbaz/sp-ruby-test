@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/decorators/unique_view'
+require_relative '../../lib/counters/unique_view'
 
-describe Decorators::UniqueView do
+describe Counters::UniqueView do
   subject { described_class.new(page_views).count }
   context 'when page views given' do
     let(:page_views) do

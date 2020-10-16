@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Decorators
+module Counters
   class Base
     def initialize(page_views)
       @page_views = page_views
