@@ -4,4 +4,4 @@
 
 require_relative 'lib/console_printer.rb'
 
-ConsolePrinter.new.print_parsed('webserver.log')
+ConsolePrinter.new(ARGV[0]).print_counts

@@ -4,7 +4,7 @@ require_relative '../lib/console_printer'
 require 'byebug'
 describe ConsolePrinter do
   describe '#print_parsed' do
-    subject { described_class.new.print_parsed(log_path) }
+    subject { described_class.new(log_path).print_counts }
     context 'when log file has page views' do
       let(:log_path) { sample_log.path }
       let(:sample_log) do
@@ -33,7 +33,7 @@ describe ConsolePrinter do
       end
 
       it 'should print output on console' do
-        expect { subject }.to output(expected_content).to_stdout
+        expect{ subject }.to output(expected_content).to_stdout
       end
     end
   end
