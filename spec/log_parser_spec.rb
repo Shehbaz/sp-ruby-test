@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/log_parser.rb'
+require_relative '../lib/log_parser'
 require 'tempfile'
 
 describe LogParser do

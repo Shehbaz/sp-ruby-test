@@ -2,6 +2,6 @@
 
 # frozen_string_literal: true
 
-require_relative 'lib/page_views.rb'
+require_relative 'lib/console_printer.rb'
 
-puts PageViews.new('webserver.log').counts
+ConsolePrinter.new.print_parsed('webserver.log')

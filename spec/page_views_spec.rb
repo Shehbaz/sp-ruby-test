@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative '../lib/page_views.rb'
+require_relative '../lib/page_views'
 
 describe PageViews do
   describe '#counts' do
     subject { described_class.new(log_path).counts }
-    context 'when page views given' do
+    context 'when log has page views' do
       let(:log_path) { sample_log.path }
       let(:sample_log) do
         Tempfile.new(['sample', '.log']).tap do |log|
@@ -32,7 +32,7 @@ describe PageViews do
         ]
       end
 
-      it 'should return sorted most views with count' do
+      it 'should return sorted views with count' do
         expect(subject).to eq(expected_sorted_count)
       end
     end

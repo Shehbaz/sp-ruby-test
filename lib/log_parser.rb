@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'errors_exceptions/errors.rb'
+require_relative 'errors_exceptions/errors'
 
 class LogParser
   attr_reader :log_path
