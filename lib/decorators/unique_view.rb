@@ -5,15 +5,18 @@ require_relative 'base'
 
 module Decorators
   class UniqueView < Base
-
     private
 
     def views_sorted
       @page_views.sort_by { |_path, ips| -ips.uniq.count }
     end
 
-    def formatted_count
-      views_sorted.map { |page, views| "#{page} #{views.uniq.count} unique views" }
+    def views_count(views)
+      views.uniq.count
+    end
+
+    def view_detail
+      'unique views'
     end
   end
 end

@@ -10,8 +10,12 @@ module Decorators
       @page_views.sort_by { |_path, ips| -ips.count }
     end
 
-    def formatted_count
-      views_sorted.map { |page, views| "#{page} #{views.count} visits" }
+    def views_count(views)
+      views.count
+    end
+
+    def view_detail
+      'visits'
     end
   end
 end
