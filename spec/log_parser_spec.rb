@@ -52,7 +52,7 @@ describe LogParser do
       CONTENT
     end
 
-    let(:parsed_lines) do
+    let(:expected_lines) do
       {
         '/home' => %w[1.1.1.1 2.2.2.2 2.2.2.2],
         '/about' => %w[5.5.5.5],
@@ -62,7 +62,7 @@ describe LogParser do
     end
 
     it 'should parse all lines' do
-      expect(subject).to eq(parsed_lines)
+      expect(subject).to eq(expected_lines)
     end
   end
 end
