@@ -5,5 +5,9 @@ module Decorators
     def initialize(page_views)
       @page_views = page_views
     end
+
+    def count
+      formatted_count
+    end
   end
 end
