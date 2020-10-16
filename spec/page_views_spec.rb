@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 require_relative '../lib/page_views.rb'
-require 'byebug'
 
 describe PageViews do
-
   describe '#most_views' do
     subject { described_class.new(page_views).most_views }
     context 'when page views given' do
